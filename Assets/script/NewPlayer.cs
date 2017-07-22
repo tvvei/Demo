@@ -19,9 +19,9 @@ public class New2 : MonoBehaviour {
 
     void OnTriggerEnter(Collider collider) {
         if (collider.tag == "prefab") {
-            MeshRenderer mr = collider.gameObject.GetComponent<MeshRenderer>();
-            mr.material.color = new Color();
-            Destroy(collider.gameObject);
+//            MeshRenderer mr = collider.gameObject.GetComponent<MeshRenderer>();
+//            mr.material.color = new Color();
+//            Destroy(collider.gameObject);
         }
     } 
 }

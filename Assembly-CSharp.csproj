@@ -54,7 +54,6 @@
      <Compile Include="Assets\blood.cs" />
      <Compile Include="Assets\ButUp.cs" />
      <Compile Include="Assets\dropdown.cs" />
-     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\play.cs" />
      <Compile Include="Assets\rocker.cs" />
      <Compile Include="Assets\script\a.cs" />
@@ -72,6 +71,7 @@
      <Compile Include="Assets\script\schen.cs" />
      <Compile Include="Assets\script\sp.cs" />
      <Compile Include="Assets\script\Ygan.cs" />
+     <Compile Include="Assets\Scripts\PlayerManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/unity2017/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

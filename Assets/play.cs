@@ -22,6 +22,13 @@ public class play : MonoBehaviour {
 	private bool isDown;
 	private Rigidbody rd;
 	public InputMode inputmode;
+	private Ygan ygan;
+	public rocker rocker;
+	public ButUp butUp;
+	public GameObject image;
+	public GameObject panel;
+
+
 	public enum InputMode{
 		keyboard,
 		mouse,
@@ -33,14 +40,9 @@ public class play : MonoBehaviour {
 	}
 
 
-	private Ygan ygan;
-	public rocker rocker;
-	public ButUp butUp;
-	public GameObject image;
-	public GameObject panel;
-
 
 	void Start () {
+		
 		ygan = GetComponent<Ygan> ();
 		rd = GetComponent<Rigidbody> ();
 		center = pos + 0.5f * size;
@@ -142,13 +144,20 @@ public class play : MonoBehaviour {
 			ygan.enabled = false;
 		}
 	}
-	
+
 	void OnTriggerEnter (Collider collider)
 	{
 		if (collider.tag == "prefab") {
 			MeshRenderer mr = collider.gameObject.GetComponent<MeshRenderer> ();
 			mr.material.color = new Color (Random.Range (0, 1f), Random.Range (0, 1f), Random.Range (0, 1f), 0.5f);
-			Destroy (collider.gameObject, 3);
+
+//			if (i != hp) {
+//				return;
+//			} else {
+//				Destroy (collider.gameObject, 3);
+//			}
 		}
+
+
 	}
 }
