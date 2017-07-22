@@ -68,20 +68,20 @@ public class dropdown : MonoBehaviour
 	public void OnValueChanged (int index)
 	{
 				
-		if (index == 0) {
-			play.inputmode = play.InputMode.keyboard;
-		}else if(index == 1){
-			play.inputmode = play.InputMode.mouse;
-		}else if(index == 2){
-			play.inputmode = play.InputMode.ray;
-		}else if(index == 3){
-			play.inputmode = play.InputMode.button1;
-		}else if(index == 4){
-			play.inputmode = play.InputMode.rocker1;
-		}else if(index == 5){
-			play.inputmode = play.InputMode.rocker;
-		}else if(index == 6){
-			play.inputmode = play.InputMode.button;
-		}
+//		if (index == 0) {
+//			play.inputmode = play.InputMode.keyboard;
+//		}else if(index == 1){
+//			play.inputmode = play.InputMode.mouse;
+//		}else if(index == 2){
+//			play.inputmode = play.InputMode.ray;
+//		}else if(index == 3){
+//			play.inputmode = play.InputMode.button1;
+//		}else if(index == 4){
+//			play.inputmode = play.InputMode.rocker1;
+//		}else if(index == 5){
+//			play.inputmode = play.InputMode.rocker;
+//		}else if(index == 6){
+//			play.inputmode = play.InputMode.button;
+//		}
 	}
 }
