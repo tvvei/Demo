@@ -2,17 +2,14 @@
 
 public class GUIRocker : MonoBehaviour
 {
+	public GUISkin skin;
+	public float radius = 50f;
+	private Vector2 center = Vector2.zero;
 	private Vector2 backgroundSize = new Vector2 (200, 200);
-	private bool isDown;
-	public Vector2 center = Vector2.zero;
 	private Vector2 pos = new Vector2 (100, Screen.height - 200);
 	private Vector2 size = new Vector2 (100, 100);
-	public float radius = 50;
 	private Vector2 offset = Vector2.zero;
-	public GUISkin guiSkin;
-	public Rigidbody rigid;
-	public int force = 5;
-	public player player;
+	private bool isDown;
 
 	void Start ()
 	{
@@ -21,9 +18,9 @@ public class GUIRocker : MonoBehaviour
 
 	void OnGUI ()
 	{
-		GUI.Box (new Rect (center - 0.5f * backgroundSize, backgroundSize), "", guiSkin.box);
+		GUI.Box (new Rect (center - 0.5f * backgroundSize, backgroundSize), "", skin.box);
 
-		if (GUI.RepeatButton (new Rect (pos, size), "", guiSkin.button) && !isDown) {
+		if (GUI.RepeatButton (new Rect (pos, size), "", skin.button) && !isDown) {
 			Vector2 mousePos = new Vector2 (Input.mousePosition.x, Screen.height - Input.mousePosition.y);
 			offset = pos - mousePos;
 			isDown = true;
@@ -40,7 +37,7 @@ public class GUIRocker : MonoBehaviour
 			var direction = v2.normalized;
 			var k = v2.magnitude / radius;
 
-			rigid.AddForce (new Vector3 (direction.x, 0, -direction.y) * k * player.force);
+			PlayerController.Instance.AddForce (direction.x, -direction.y);
 		}
 
 		if (Input.GetMouseButtonUp (0) && isDown) {

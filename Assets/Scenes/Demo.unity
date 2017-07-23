@@ -2103,12 +2103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3920a8276356ddb45bb17560b7645934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  center: {x: 0, y: 0}
+  skin: {fileID: 11400000, guid: ba3f5549317cf004da75ba55975aead8, type: 2}
   radius: 50
-  guiSkin: {fileID: 11400000, guid: ba3f5549317cf004da75ba55975aead8, type: 2}
-  rigid: {fileID: 1123136483}
-  force: 5
-  player: {fileID: 0}
 --- !u!1 &715767304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,7 +2256,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ab5bb3eb247a4492fa9900f6ac0db050, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e69c8ab81a63d644ac1eb3736359f19, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2722,7 +2718,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ab5bb3eb247a4492fa9900f6ac0db050, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e69c8ab81a63d644ac1eb3736359f19, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
