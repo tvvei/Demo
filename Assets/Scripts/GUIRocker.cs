@@ -16,7 +16,7 @@ public class GUIRocker : MonoBehaviour {
 	public player player;
 
 	void Start () {
-		rd = GetComponent<Rigidbody> ();
+//		rd = GetComponent<Rigidbody> ();
 		center = pos + 0.5f * size;
 	}
 	
