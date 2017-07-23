@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
 	void Update ()
 	{
+		
 		rigid.AddForce (new Vector3 (axis.x, 0, axis.y) * force);
 	}
 

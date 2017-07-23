@@ -7,6 +7,7 @@ public class dropdown : MonoBehaviour
 	public play play; 
 	public GameObject image;
 	public GameObject panel;
+	public GameObject Rocker;
 
 	Dropdown dropdownItem;
 	List<string> tempNames;
@@ -26,10 +27,6 @@ public class dropdown : MonoBehaviour
 	}
 
 
-	/// <summary>
-	/// 刷数据
-	/// </summary>
-	/// <param name="showNames"></param>
 	private void UpdateDropdownView (List<string> showNames)
 	{
 		dropdownItem.options.Clear ();
@@ -41,19 +38,16 @@ public class dropdown : MonoBehaviour
 		}
 		dropdownItem.captionText.text = showNames [0];
 	}
-
-	/// <summary>
-	/// 模拟数据
-	/// </summary>
+		
 	private void AddNames ()
 	{
-		string s1 = "keyboard";
-		string s2 = "mouse";
-		string s3 = "ray";
-		string s4 = "button1";
-		string s5 = "rocker1";
-		string s6 = "rocker";
-		string s7 = "button";
+		string s1 = "Keyboard";
+		string s2 = "Mouse";
+		string s3 = "Raycast";
+		string s4 = "GUIKeyboard";
+		string s5 = "GUIRocker";
+		string s6 = "CanvasKeyboard";
+		string s7 = "CanvasRocker";
 
 		tempNames.Add (s1);
 		tempNames.Add (s2);
@@ -64,7 +58,11 @@ public class dropdown : MonoBehaviour
 		tempNames.Add (s7);
 
 	}
-		
+
+	void OnUpdate(){
+	
+	}
+
 	public void OnValueChanged (int index)
 	{
 				

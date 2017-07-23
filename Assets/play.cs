@@ -39,14 +39,14 @@ public class play : MonoBehaviour {
 //	}
 
 
-
-	void Start () {
-		
-		ygan = GetComponent<Ygan> ();
-		rd = GetComponent<Rigidbody> ();
-		center = pos + 0.5f * size;
-
-	}
+//
+//	void Start () {
+//		
+//		ygan = GetComponent<Ygan> ();
+//		rd = GetComponent<Rigidbody> ();
+//		center = pos + 0.5f * size;
+//
+//	}
 	void OnGUI(){
 	}
 //		if (inputmode == InputMode.rocker) {
@@ -145,15 +145,15 @@ public class play : MonoBehaviour {
 //		}
 //	}
 //
-	void OnTriggerEnter (Collider collider)
-	{
-		if (collider.tag == "prefab") {
-			MeshRenderer mr = collider.gameObject.GetComponent<MeshRenderer> ();
-			mr.material.color = new Color (Random.Range (0, 1f), Random.Range (0, 1f), Random.Range (0, 1f), 0.5f);
-			Destroy (collider.gameObject, 3);
-			}
-		}
-
+//	void OnTriggerEnter (Collider collider)
+//	{
+//		if (collider.tag == "prefab") {
+//			MeshRenderer mr = collider.gameObject.GetComponent<MeshRenderer> ();
+//			mr.material.color = new Color (Random.Range (0, 1f), Random.Range (0, 1f), Random.Range (0, 1f), 0.5f);
+//			Destroy (collider.gameObject, 3);
+//			}
+//		}
+//
 }
 
 

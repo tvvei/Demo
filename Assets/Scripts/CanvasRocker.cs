@@ -15,6 +15,7 @@ public class CanvasRocker : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDra
 	private float lastIsDownTime;
 	public int force = 9;
 
+
 	void Start ()
 	{
 

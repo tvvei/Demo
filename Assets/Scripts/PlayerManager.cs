@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public enum InputMode
 {
 	None,
@@ -12,8 +13,10 @@ public enum InputMode
 	CanvasRocker,
 }
 
+
 public class PlayerManager : MonoBehaviour
 {
+	public GameObject rocker;
 	public InputMode inputMode = InputMode.Keyboard;
 	public GameObject[] controllers = new GameObject[0];
 	private InputMode lastInputMode = InputMode.None;
@@ -25,6 +28,12 @@ public class PlayerManager : MonoBehaviour
 
 	void Update ()
 	{
+		if (inputMode != InputMode.CanvasRocker) {
+			rocker.SetActive (false);
+		} else {
+			rocker.SetActive (true);
+		}
+
 		if (lastInputMode != inputMode) {
 			for (int i = 0; i < controllers.Length; i++) {
 				if (controllers [i] == null) {

@@ -915,6 +915,7 @@ MonoBehaviour:
   play: {fileID: 0}
   image: {fileID: 997360284}
   panel: {fileID: 1247641107}
+  Rocker: {fileID: 0}
 --- !u!1 &268909398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,6 +3336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6dcb2486ebdcd540ac7ee764307e822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocker: {fileID: 997360284}
   inputMode: 1
   controllers:
   - {fileID: 1583679400}
@@ -4988,7 +4990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 40
-  rigid: {fileID: 0}
+  rigid: {fileID: 1123136483}
   force: 9
 --- !u!1 &2056414207
 GameObject:
