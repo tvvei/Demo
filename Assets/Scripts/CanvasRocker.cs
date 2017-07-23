@@ -8,7 +8,7 @@ public class CanvasRocker : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDra
 	private RectTransform Joystick;
 	private Vector3 a;
 	public float radius = 40;
-	public Rigidbody rd;
+	public Rigidbody rigid;
 	private Vector2 Mp;
 	private float delay = 0f;
 	private bool isDown = false;
@@ -28,7 +28,7 @@ public class CanvasRocker : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDra
 			var direction = v2.normalized;
 			var k = v2.magnitude / radius*2;
 			if (Time.time - lastIsDownTime > delay) {
-				rd.AddForce (new Vector3 (direction.x, 0, direction.y) * k * force);
+				rigid.AddForce (new Vector3 (direction.x, 0, direction.y) * k * force);
 			}
 		}
 	}

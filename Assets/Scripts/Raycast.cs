@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Raycast : MonoBehaviour {
-	public Rigidbody rd;
+	public Rigidbody rigid;
 	public LayerMask layerMask = -1;
 	public int force = 5;
 
 	void Start () {
-		rd = GetComponent<Rigidbody> ();
+		rigid = GetComponent<Rigidbody> ();
 	}
 	
 
@@ -19,11 +19,11 @@ public class Raycast : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit, 100, layerMask)) {
 				Debug.Log (hit.collider.name + " : " + hit.point);
-				Vector3 a = hit.point - rd.position;
-				Debug.DrawLine (rd.transform.position, rd.transform.position + a, Color.blue);
+				Vector3 a = hit.point - rigid.position;
+				Debug.DrawLine (rigid.transform.position, rigid.transform.position + a, Color.blue);
 				Vector3 b = Vector3.ProjectOnPlane (a, Vector3.up);
-				Debug.DrawLine (rd.transform.position, rd.transform.position + b, Color.green);
-				rd.AddForce (Vector3.Normalize (b) * force);
+				Debug.DrawLine (rigid.transform.position, rigid.transform.position + b, Color.green);
+				rigid.AddForce (Vector3.Normalize (b) * force);
 			}
 		}
 	}
