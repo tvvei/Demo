@@ -8,18 +8,13 @@ public class blood : MonoBehaviour {
 	public Vector3 trans = new Vector3(0,1,0);
 	private Scrollbar scr;
 	public float hp;
-	public Rigidbody play;
+
 
 
 	void Start ()
 	{
 		transform.position = new Vector3 (cube.transform.position.x, 2, cube.transform.position.z);
 
-	}
-
-	void OnTriggerEnter (Collider play){
-		Debug.Log ("sssssssss");
-		scr.size = scr.size - 1 / hp;
 	}
 
 	void Update (){

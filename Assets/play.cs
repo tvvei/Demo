@@ -48,6 +48,7 @@ public class play : MonoBehaviour {
 
 	}
 	void OnGUI(){
+	}
 //		if (inputmode == InputMode.rocker) {
 //			image.SetActive (true);
 //		} else {
@@ -105,8 +106,8 @@ public class play : MonoBehaviour {
 //
 //		if (inputmode == InputMode.rocker1) {
 //			
-////			ygan.enabled = true;
-//
+//			ygan.enabled = true;
+
 //			GUI.Box (new Rect (center - 0.5f * backgroundSize, backgroundSize), "", guiSkin.box);
 //
 //			if (GUI.RepeatButton (new Rect (pos, size), "", guiSkin.button) && !isDown) {
@@ -142,21 +143,17 @@ public class play : MonoBehaviour {
 //		else {
 //			ygan.enabled = false;
 //		}
-	}
-
+//	}
+//
 	void OnTriggerEnter (Collider collider)
 	{
 		if (collider.tag == "prefab") {
 			MeshRenderer mr = collider.gameObject.GetComponent<MeshRenderer> ();
 			mr.material.color = new Color (Random.Range (0, 1f), Random.Range (0, 1f), Random.Range (0, 1f), 0.5f);
-
-//			if (i != hp) {
-//				return;
-//			} else {
-//				Destroy (collider.gameObject, 3);
-//			}
+			Destroy (collider.gameObject, 3);
+			}
 		}
 
-
-	}
 }
+
+
