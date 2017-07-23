@@ -994,7 +994,6 @@ GameObject:
   - component: {fileID: 317855772}
   - component: {fileID: 317855771}
   - component: {fileID: 317855770}
-  - component: {fileID: 317855773}
   m_Layer: 5
   m_Name: Down
   m_TagString: Untagged
@@ -1059,18 +1058,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 317855771}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: down
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &317855771
@@ -1106,19 +1094,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 317855768}
---- !u!114 &317855773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 317855768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 134fac80383c6b44788d5449f981ecef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rd: {fileID: 1123136483}
-  vector3: {x: 0, y: 0, z: -10}
 --- !u!1001 &359561280
 Prefab:
   m_ObjectHideFlags: 0
@@ -1429,7 +1404,6 @@ GameObject:
   - component: {fileID: 416302134}
   - component: {fileID: 416302133}
   - component: {fileID: 416302132}
-  - component: {fileID: 416302135}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -1494,18 +1468,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416302133}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: left
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &416302133
@@ -1541,19 +1504,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416302130}
---- !u!114 &416302135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 416302130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 134fac80383c6b44788d5449f981ecef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rd: {fileID: 1123136483}
-  vector3: {x: -10, y: 0, z: 0}
 --- !u!1 &437385580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,8 +2825,6 @@ GameObject:
   - component: {fileID: 1042940288}
   - component: {fileID: 1042940287}
   - component: {fileID: 1042940286}
-  - component: {fileID: 1042940289}
-  - component: {fileID: 1042940290}
   m_Layer: 5
   m_Name: Up
   m_TagString: Untagged
@@ -2977,32 +2925,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1042940284}
---- !u!114 &1042940289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1042940284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
---- !u!114 &1042940290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1042940284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 134fac80383c6b44788d5449f981ecef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rd: {fileID: 1123136483}
-  vector3: {x: 0, y: 0, z: 10}
 --- !u!1 &1056386153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,7 +2936,6 @@ GameObject:
   - component: {fileID: 1056386157}
   - component: {fileID: 1056386156}
   - component: {fileID: 1056386155}
-  - component: {fileID: 1056386158}
   m_Layer: 5
   m_Name: Right
   m_TagString: Untagged
@@ -3079,18 +3000,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1056386156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: right
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1056386156
@@ -3126,19 +3036,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056386153}
---- !u!114 &1056386158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1056386153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 134fac80383c6b44788d5449f981ecef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rd: {fileID: 1123136483}
-  vector3: {x: 10, y: 0, z: 0}
 --- !u!1 &1076719183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,8 +3451,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d829ae2efaa9a41b6c47041eab00d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigid: {fileID: 0}
-  vector3: {x: 0, y: 0, z: 0}
+  keyboard: {fileID: 1247641107}
+  up: {fileID: 1042940284}
+  down: {fileID: 317855768}
+  left: {fileID: 416302130}
+  right: {fileID: 1056386153}
 --- !u!1 &1188467098
 GameObject:
   m_ObjectHideFlags: 0

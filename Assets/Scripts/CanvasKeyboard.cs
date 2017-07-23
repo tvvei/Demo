@@ -1,38 +1,63 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 
-public class CanvasKeyboard : MonoBehaviour,IPointerDownHandler,IPointerUpHandler,IPointerExitHandler
+public class CanvasKeyboard : MonoBehaviour
 {
-	private float delay = 0.2f;
+	public GameObject keyboard;
+	public GameObject up;
+	public GameObject down;
+	public GameObject left;
+	public GameObject right;
+	private Vector2 axis = new Vector2 (0, 0);
 	private bool isDown = false;
-	private float lastIsDownTime;
-	public Rigidbody rigid;
-	public Vector3 vector3;
 
-	void start(){
-
-	}
-
-	void Update(){
-		if (isDown) {
-			if (Time.time - lastIsDownTime > delay) {
-				rigid.AddForce (vector3 * 6);
-			}
+	void OnEnable ()
+	{
+		if (keyboard != null) {
+			keyboard.SetActive (true);
 		}
 	}
 
-	public void OnPointerDown(PointerEventData data){
+	void OnDisable ()
+	{
+		if (keyboard != null) {
+			keyboard.SetActive (false);
+		}
+	}
+
+	void Start ()
+	{
+		EventTriggerListener.Get (up).onDown = OnPointerDown;
+		EventTriggerListener.Get (down).onDown = OnPointerDown;
+		EventTriggerListener.Get (left).onDown = OnPointerDown;
+		EventTriggerListener.Get (right).onDown = OnPointerDown;
+		EventTriggerListener.Get (up).onUp = OnPointerUp;
+		EventTriggerListener.Get (down).onUp = OnPointerUp;
+		EventTriggerListener.Get (left).onUp = OnPointerUp;
+		EventTriggerListener.Get (right).onUp = OnPointerUp;
+	}
+
+	void Update ()
+	{
+		if (isDown) {
+			PlayerController.Instance.AddForce (axis.x, axis.y);
+		}
+	}
+
+	void OnPointerDown (GameObject go)
+	{
+		if (go == up) {
+			axis = new Vector2 (0, 1);
+		} else if (go == down) {
+			axis = new Vector2 (0, -1);
+		} else if (go == left) {
+			axis = new Vector2 (-1, 0);
+		} else if (go == right) {
+			axis = new Vector2 (1, 0);
+		}
 		isDown = true;
-		lastIsDownTime = Time.time;
 	}
 
-	public void OnPointerUp(PointerEventData data){
-		isDown = false;
-	}
-
-	public void OnPointerExit(PointerEventData data)
+	void OnPointerUp (GameObject go)
 	{
 		isDown = false;
 	}

@@ -72,6 +72,7 @@
      <Compile Include="Assets\script\Ygan.cs" />
      <Compile Include="Assets\Scripts\CanvasKeyboard.cs" />
      <Compile Include="Assets\Scripts\CanvasRocker.cs" />
+     <Compile Include="Assets\Scripts\EventTriggerListener.cs" />
      <Compile Include="Assets\Scripts\GUIKeyboard.cs" />
      <Compile Include="Assets\Scripts\GUIRocker.cs" />
      <Compile Include="Assets\Scripts\Keyboard.cs" />
