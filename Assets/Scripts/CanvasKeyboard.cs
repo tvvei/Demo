@@ -8,7 +8,7 @@ public class CanvasKeyboard : MonoBehaviour,IPointerDownHandler,IPointerUpHandle
 	private float delay = 0.2f;
 	private bool isDown = false;
 	private float lastIsDownTime;
-	public Rigidbody rd;
+	public Rigidbody rigid;
 	public Vector3 vector3;
 
 	void start(){
@@ -18,7 +18,7 @@ public class CanvasKeyboard : MonoBehaviour,IPointerDownHandler,IPointerUpHandle
 	void Update(){
 		if (isDown) {
 			if (Time.time - lastIsDownTime > delay) {
-				rd.AddForce (vector3 * 6);
+				rigid.AddForce (vector3 * 6);
 			}
 		}
 	}

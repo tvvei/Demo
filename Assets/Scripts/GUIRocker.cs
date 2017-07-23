@@ -11,12 +11,12 @@ public class GUIRocker : MonoBehaviour {
 	public float radius = 50;
 	private Vector2 offset = Vector2.zero;
 	public GUISkin guiSkin;
-	public Rigidbody rd;
+	public Rigidbody rigid;
 	public int force = 5;
 	public player player;
 
 	void Start () {
-//		rd = GetComponent<Rigidbody> ();
+		rigid = GetComponent<Rigidbody> ();
 		center = pos + 0.5f * size;
 	}
 	
@@ -41,7 +41,7 @@ public class GUIRocker : MonoBehaviour {
 			var direction = v2.normalized;
 			var k = v2.magnitude / radius;
 
-			rd.AddForce (new Vector3 (direction.x, 0, -direction.y) * k * player.force);
+			rigid.AddForce (new Vector3 (direction.x, 0, -direction.y) * k * player.force);
 		}
 
 
