@@ -2,6 +2,7 @@
 
 public enum InputMode
 {
+	None,
 	Keyboard,
 	Mouse,
 	Raycast,
@@ -15,11 +16,11 @@ public class PlayerManager : MonoBehaviour
 {
 	public InputMode inputMode = InputMode.Keyboard;
 	public GameObject[] controllers = new GameObject[0];
-	private InputMode lastInputMode = InputMode.Keyboard;
+	private InputMode lastInputMode = InputMode.None;
 
 	void Start ()
 	{
-		lastInputMode = inputMode;
+
 	}
 
 	void Update ()
@@ -29,7 +30,7 @@ public class PlayerManager : MonoBehaviour
 				if (controllers [i] == null) {
 					continue;
 				}
-				if (i == (int)inputMode) {
+				if (i == (int)inputMode - 1) {
 					controllers [i].SetActive (true);
 				} else {
 					controllers [i].SetActive (false);

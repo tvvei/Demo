@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679460452}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3920a8276356ddb45bb17560b7645934, type: 3}
   m_Name: 
@@ -2106,7 +2106,7 @@ MonoBehaviour:
   center: {x: 0, y: 0}
   radius: 50
   guiSkin: {fileID: 11400000, guid: ba3f5549317cf004da75ba55975aead8, type: 2}
-  rigid: {fileID: 0}
+  rigid: {fileID: 1123136483}
   force: 5
   player: {fileID: 0}
 --- !u!1 &715767304
@@ -2309,16 +2309,16 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 745954263}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0ad380d0b829df46b4d2c9040fadf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnTexture1: {fileID: 2800000, guid: ca9115b568b6921468c9fbfe03314b11, type: 3}
-  btnTexture2: {fileID: 2800000, guid: f2dfcbb11007b5f44baf90af85d79d5d, type: 3}
-  btnTexture3: {fileID: 2800000, guid: a02910dd60103f7459fb65b09bd7732e, type: 3}
-  btnTexture4: {fileID: 2800000, guid: e0f55e73c13ecd049a291af8ed685822, type: 3}
-  rigid: {fileID: 0}
+  upTexture: {fileID: 2800000, guid: ca9115b568b6921468c9fbfe03314b11, type: 3}
+  downTexture: {fileID: 2800000, guid: f2dfcbb11007b5f44baf90af85d79d5d, type: 3}
+  leftTexture: {fileID: 2800000, guid: a02910dd60103f7459fb65b09bd7732e, type: 3}
+  rightTexture: {fileID: 2800000, guid: e0f55e73c13ecd049a291af8ed685822, type: 3}
+  rigid: {fileID: 1123136483}
   force: 5
 --- !u!4 &754863784 stripped
 Transform:
@@ -3339,13 +3339,28 @@ GameObject:
   - component: {fileID: 1123136484}
   - component: {fileID: 1123136483}
   - component: {fileID: 1123136487}
+  - component: {fileID: 1123136479}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1123136479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123136478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f5f7f837a36bc4ea5c6acbe78421d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigid: {fileID: 1123136483}
+  force: 5
+  axis: {x: 0, y: 0}
 --- !u!54 &1123136483
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3427,7 +3442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6dcb2486ebdcd540ac7ee764307e822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputMode: 0
+  inputMode: 1
   controllers:
   - {fileID: 1583679400}
   - {fileID: 96972465}
@@ -4109,8 +4124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef820f34fed9a814db0bc0e981d06cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigid: {fileID: 1123136483}
-  force: 5
 --- !u!1 &1586628423
 GameObject:
   m_ObjectHideFlags: 0
