@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e62576d1d4cc9448e2b75f506be489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd: {fileID: 1123136483}
+  rigid: {fileID: 1123136483}
   force: 5
 --- !u!1 &108149967
 GameObject:
@@ -518,10 +518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58db80d9ebe7d6a43b650848bb8f728f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd: {fileID: 1123136483}
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+  rigid: {fileID: 1123136483}
   force: 5
 --- !u!4 &125044135 stripped
 Transform:
@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679460452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3920a8276356ddb45bb17560b7645934, type: 3}
   m_Name: 
@@ -2106,7 +2106,7 @@ MonoBehaviour:
   center: {x: 0, y: 0}
   radius: 50
   guiSkin: {fileID: 11400000, guid: ba3f5549317cf004da75ba55975aead8, type: 2}
-  rd: {fileID: 1123136483}
+  rigid: {fileID: 0}
   force: 5
   player: {fileID: 0}
 --- !u!1 &715767304
@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 745954263}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0ad380d0b829df46b4d2c9040fadf2e, type: 3}
   m_Name: 
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   btnTexture2: {fileID: 2800000, guid: f2dfcbb11007b5f44baf90af85d79d5d, type: 3}
   btnTexture3: {fileID: 2800000, guid: a02910dd60103f7459fb65b09bd7732e, type: 3}
   btnTexture4: {fileID: 2800000, guid: e0f55e73c13ecd049a291af8ed685822, type: 3}
-  rd: {fileID: 1123136483}
+  rigid: {fileID: 0}
   force: 5
 --- !u!4 &754863784 stripped
 Transform:
@@ -3543,7 +3543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d829ae2efaa9a41b6c47041eab00d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd: {fileID: 1123136483}
+  rigid: {fileID: 0}
   vector3: {x: 0, y: 0, z: 0}
 --- !u!1 &1188467098
 GameObject:
@@ -5073,13 +5073,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2047133261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e346dcfc152906d4a89014b7754828ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 40
-  rd: {fileID: 1123136483}
+  rigid: {fileID: 0}
   force: 9
 --- !u!1 &2056414207
 GameObject:
