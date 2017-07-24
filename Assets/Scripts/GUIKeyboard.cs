@@ -15,16 +15,16 @@ public class GUIKeyboard : MonoBehaviour
 	void OnGUI ()
 	{
 		if (GUI.RepeatButton (new Rect (Screen.width - 120, Screen.height - 120, 50, 50), upTexture)) {
-			PlayerController.Instance.AddForce (0,6);
+			PlayerController.Instance.AddForce (0, 1);
 		}
 		if (GUI.RepeatButton (new Rect (Screen.width - 120, Screen.height - 60, 50, 50), downTexture)) {
-			PlayerController.Instance.AddForce (0,-6);
+			PlayerController.Instance.AddForce (0, -1);
 		}
 		if (GUI.RepeatButton (new Rect (Screen.width - 180, Screen.height - 60, 50, 50), leftTexture)) {
-			PlayerController.Instance.AddForce (-6,0);
+			PlayerController.Instance.AddForce (-1, 0);
 		}
 		if (GUI.RepeatButton (new Rect (Screen.width - 60, Screen.height - 60, 50, 50), rightTexture)) {
-			PlayerController.Instance.AddForce (6,0);
+			PlayerController.Instance.AddForce (1, 0);
 		}
 	}
 }
