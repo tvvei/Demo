@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEngine.EventSystems;
+using UnityEngine;
 
 public class CanvasKeyboard : MonoBehaviour
 {
@@ -26,14 +27,14 @@ public class CanvasKeyboard : MonoBehaviour
 
 	void Start ()
 	{
-		EventTriggerListener.Get (up).onDown = OnPointerDown;
-		EventTriggerListener.Get (down).onDown = OnPointerDown;
-		EventTriggerListener.Get (left).onDown = OnPointerDown;
-		EventTriggerListener.Get (right).onDown = OnPointerDown;
-		EventTriggerListener.Get (up).onUp = OnPointerUp;
-		EventTriggerListener.Get (down).onUp = OnPointerUp;
-		EventTriggerListener.Get (left).onUp = OnPointerUp;
-		EventTriggerListener.Get (right).onUp = OnPointerUp;
+		EventTriggerListener.Get (up).PointerDown = OnPointerDown;
+		EventTriggerListener.Get (down).PointerDown = OnPointerDown;
+		EventTriggerListener.Get (left).PointerDown = OnPointerDown;
+		EventTriggerListener.Get (right).PointerDown = OnPointerDown;
+		EventTriggerListener.Get (up).PointerUp = OnPointerUp;
+		EventTriggerListener.Get (down).PointerUp = OnPointerUp;
+		EventTriggerListener.Get (left).PointerUp = OnPointerUp;
+		EventTriggerListener.Get (right).PointerUp = OnPointerUp;
 	}
 
 	void Update ()
@@ -43,22 +44,23 @@ public class CanvasKeyboard : MonoBehaviour
 		}
 	}
 
-	void OnPointerDown (GameObject go)
+	void OnPointerDown (PointerEventData eventData)
 	{
-		if (go == up) {
+		if (eventData.selectedObject == up) {
 			axis = new Vector2 (0, 1);
-		} else if (go == down) {
+		} else if (eventData.selectedObject == down) {
 			axis = new Vector2 (0, -1);
-		} else if (go == left) {
+		} else if (eventData.selectedObject == left) {
 			axis = new Vector2 (-1, 0);
-		} else if (go == right) {
+		} else if (eventData.selectedObject == right) {
 			axis = new Vector2 (1, 0);
 		}
 		isDown = true;
 	}
 
-	void OnPointerUp (GameObject go)
+	void OnPointerUp (PointerEventData eventData)
 	{
+		PlayerController.Instance.AddForce (0, 0);
 		isDown = false;
 	}
 }

@@ -2148,7 +2148,6 @@ GameObject:
   - component: {fileID: 724788839}
   - component: {fileID: 724788842}
   - component: {fileID: 724788841}
-  - component: {fileID: 724788840}
   m_Layer: 5
   m_Name: Joystick
   m_TagString: Untagged
@@ -2172,22 +2171,8 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &724788840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724788838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 862f71434c84001469a2f27583c13f5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 40
-  rd: {fileID: 1123136483}
-  force: 9
 --- !u!114 &724788841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2647,8 +2632,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 65.25, y: 57}
-  m_SizeDelta: {x: 129.5, y: 114}
+  m_AnchoredPosition: {x: 64, y: 64}
+  m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997360286
 MonoBehaviour:
@@ -4984,14 +4969,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2047133261}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e346dcfc152906d4a89014b7754828ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 40
-  rigid: {fileID: 1123136483}
-  force: 9
+  joystick: {fileID: 724788839}
+  radius: 64
 --- !u!1 &2056414207
 GameObject:
   m_ObjectHideFlags: 0

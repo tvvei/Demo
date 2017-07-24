@@ -1,64 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.EventSystems;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class CanvasRocker : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDragHandler
+public class CanvasRocker : MonoBehaviour
 {
-	private RectTransform Joystick;
-	private Vector3 a;
-	public float radius = 40;
-	public Rigidbody rigid;
-	private Vector2 Mp;
-	private float delay = 0f;
-	private bool isDown = false;
-	private float lastIsDownTime;
-	public int force = 9;
-
+	public RectTransform joystick;
+	public float radius = 40f;
+	private Vector2 center = Vector2.zero;
 
 	void Start ()
 	{
-
-		Joystick = this.gameObject.GetComponent<RectTransform> ();
-		a = Joystick.position;
+		EventTriggerListener.Get (joystick.gameObject).Drag = OnDrag;
+		EventTriggerListener.Get (joystick.gameObject).EndDrag = OnEndDrag;
+		center = joystick.position;
 	}
 
-	void Update(){
-		if (isDown) {
-			var v2 = Joystick.position - a;
-			var direction = v2.normalized;
-			var k = v2.magnitude / radius*2;
-			if (Time.time - lastIsDownTime > delay) {
-				rigid.AddForce (new Vector3 (direction.x, 0, direction.y) * k * force);
-			}
+	void OnDrag (PointerEventData eventData)
+	{
+		Vector2 distance = eventData.position - center;
+		if (distance.magnitude >= radius) {
+			joystick.position = distance.normalized * radius + center;
+		} else {
+			joystick.position = eventData.position;
 		}
+		PlayerController.Instance.AddForce (distance.normalized.x, distance.normalized.y);
 	}
 
-
-	public void OnBeginDrag (PointerEventData data)
+	void OnEndDrag (PointerEventData eventData)
 	{
-
-	}
-
-	public void OnDrag (PointerEventData data)
-	{
-
-		Joystick.position = data.position;
-
-		float distance = Vector2.Distance (a, data.position);
-		if (distance > radius) {			
-			Joystick.position = a;
-
-		} 
-
-		isDown = true;
-		lastIsDownTime = Time.time;
-
-	}
-
-	public void OnEndDrag (PointerEventData data)
-	{
-		Joystick.position = a;
-
+		joystick.position = center;
+		PlayerController.Instance.AddForce (0, 0);
 	}
 }
