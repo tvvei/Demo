@@ -60,7 +60,6 @@ public class CanvasKeyboard : MonoBehaviour
 
 	void OnPointerUp (PointerEventData eventData)
 	{
-		PlayerController.Instance.AddForce (0, 0);
 		isDown = false;
 	}
 }

@@ -28,6 +28,5 @@ public class CanvasRocker : MonoBehaviour
 	void OnEndDrag (PointerEventData eventData)
 	{
 		joystick.position = center;
-		PlayerController.Instance.AddForce (0, 0);
 	}
 }
