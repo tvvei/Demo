@@ -16,10 +16,23 @@ public enum InputMode
 
 public class PlayerManager : MonoBehaviour
 {
+	static private PlayerManager instance;
+
+	static public PlayerManager Instance {
+		get {
+			return instance;
+		}
+	}
+
 	public GameObject rocker;
 	public InputMode inputMode = InputMode.Keyboard;
 	public GameObject[] controllers = new GameObject[0];
 	private InputMode lastInputMode = InputMode.None;
+
+	void Awake ()
+	{
+		instance = this;
+	}
 
 	void Start ()
 	{

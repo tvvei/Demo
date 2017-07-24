@@ -52,10 +52,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\blood.cs" />
-     <Compile Include="Assets\dropdown.cs" />
      <Compile Include="Assets\Scripts\CanvasKeyboard.cs" />
      <Compile Include="Assets\Scripts\CanvasRocker.cs" />
      <Compile Include="Assets\Scripts\EventTriggerListener.cs" />
+     <Compile Include="Assets\Scripts\Followcamera.cs" />
      <Compile Include="Assets\Scripts\GUIKeyboard.cs" />
      <Compile Include="Assets\Scripts\GUIRocker.cs" />
      <Compile Include="Assets\Scripts\Keyboard.cs" />
@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\Raycast.cs" />
+     <Compile Include="Assets\Scripts\SelectInputMode.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

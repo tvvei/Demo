@@ -841,27 +841,10 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 264688650}
-        m_MethodName: OnValueChanged
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &264688648
@@ -905,10 +888,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 264688645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 550a02ff85634084bbf17fd3f0d48f94, type: 3}
+  m_Script: {fileID: 11500000, guid: 41c825ebc99e0784da127d793371c010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 997360284}
 --- !u!1 &268909398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,6 +1891,7 @@ GameObject:
   - component: {fileID: 671404782}
   - component: {fileID: 671404781}
   - component: {fileID: 671404787}
+  - component: {fileID: 671404786}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1986,6 +1969,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 47.426003, y: -0.455, z: 0.50200003}
+--- !u!114 &671404786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 671404780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84876b1b24181d141bad1753a050d18d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransfrom: {fileID: 2013520733}
 --- !u!45 &671404787
 Skybox:
   m_ObjectHideFlags: 0
@@ -4391,7 +4386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: 
 --- !u!222 &1721949880
 CanvasRenderer:
   m_ObjectHideFlags: 0
