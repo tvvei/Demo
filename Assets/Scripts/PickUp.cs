@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+	public GameObject scrollbar;
+	public  float coll = 0;
     private int direction = 1;
     private IEnumerator coroutine;
 
-    void Start()
+	void Start()
     {       
-//	StartCoroutine(Pop(Time.deltaTime));
+		
+//		StartCoroutine(Pop(Time.deltaTime));
 //        StartCoroutine(Bop(Time.deltaTime));  
 	}
     
     void Update()
     {
 
-
-
-//
         transform.Rotate (new Vector3 (1, 1, 1));
 ////
 //		/// 
@@ -51,4 +51,17 @@ public class PickUp : MonoBehaviour
         }
         StartCoroutine(Pop(Time.deltaTime));
     }
+
+	private void OnTriggerEnter (Collider cube)
+	{
+		
+		coll = coll + 1;
+		print (coll);
+
+		if (coll == 3) {
+			Destroy (gameObject, 3);
+		}
+			
+
+	}
 }

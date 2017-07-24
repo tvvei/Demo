@@ -3,8 +3,6 @@
 public class Raycast : MonoBehaviour
 {
 	public LayerMask layerMask = -1;
-	public Rigidbody rigid;
-	public int force = 5;
 
 	void Start ()
 	{
@@ -20,9 +18,12 @@ public class Raycast : MonoBehaviour
 			#endif
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit, 100, layerMask)) {
+				Rigidbody rigid = PlayerController.Instance.rigid;
+
 				Vector3 a = hit.point - rigid.position;
 				Vector3 b = Vector3.ProjectOnPlane (a, Vector3.up);
-				rigid.AddForce (Vector3.Normalize (b) * force);
+				Vector3 n = Vector3.Normalize (b);
+				PlayerController.Instance.AddForce (n.x, n.z);
 				#if UNITY_EDITOR
 				Debug.DrawLine (rigid.transform.position, rigid.transform.position + a, Color.blue);
 				Debug.DrawLine (rigid.transform.position, rigid.transform.position + b, Color.green);
