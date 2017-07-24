@@ -4,10 +4,7 @@ using UnityEngine.UI;
 
 public class dropdown : MonoBehaviour
 {
-	public play play; 
 	public GameObject image;
-	public GameObject panel;
-	public GameObject Rocker;
 
 	Dropdown dropdownItem;
 	List<string> tempNames;
@@ -20,8 +17,6 @@ public class dropdown : MonoBehaviour
 
 	void Start ()
 	{
-		image.SetActive (false);
-		panel.SetActive (false);
 		AddNames ();
 		UpdateDropdownView (tempNames);
 	}
@@ -63,23 +58,24 @@ public class dropdown : MonoBehaviour
 	
 	}
 
-	public void OnValueChanged (int index)
-	{
-				
+//	public void OnValueChanged (int index)
+//	{
+//		
+//				
 //		if (index == 0) {
-//			play.inputmode = play.InputMode.keyboard;
+//			player.inputmode = player.InputMode.keyboard;
 //		}else if(index == 1){
-//			play.inputmode = play.InputMode.mouse;
+//			player.inputmode = player.InputMode.mouse;
 //		}else if(index == 2){
-//			play.inputmode = play.InputMode.ray;
+//			player.inputmode = player.InputMode.ray;
 //		}else if(index == 3){
-//			play.inputmode = play.InputMode.button1;
+//			player.inputmode = player.InputMode.button1;
 //		}else if(index == 4){
-//			play.inputmode = play.InputMode.rocker1;
+//			player.inputmode = player.InputMode.rocker1;
 //		}else if(index == 5){
-//			play.inputmode = play.InputMode.rocker;
+//			player.inputmode = player.InputMode.button;
 //		}else if(index == 6){
-//			play.inputmode = play.InputMode.button;
+//			player.inputmode = player.InputMode.rocker;
 //		}
-	}
+
 }

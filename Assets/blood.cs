@@ -4,25 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class blood : MonoBehaviour {
-	public Transform cube;
-	public Vector3 trans = new Vector3(0,1,0);
-	private Scrollbar scr;
-	public float hp;
-
-
+	public Scrollbar size;
+	public GameObject cube;
+	public float hp = 1;
 
 	void Start ()
 	{
-		transform.position = new Vector3 (cube.transform.position.x, 2, cube.transform.position.z);
+		Scrollbar scrollbar = GetComponent<Scrollbar> ();
+		scrollbar.size = 1;
+
+		transform.position = new Vector3 (cube.transform.position.x, 1, cube.transform.position.z);
 
 	}
 
 	void Update (){
+//		float coll = PickUp.coll;
+//		size = size*(1-coll/hp) ;
+
+
 		if (cube == null) {
 			gameObject.SetActive (false);
 		}
 
 	}
-
 
 }

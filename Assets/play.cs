@@ -8,7 +8,7 @@ public class play : MonoBehaviour {
 	public Texture btnTexture2;
 	public Texture btnTexture3;
 	public Texture btnTexture4;
-	public player player;
+//	public play play;
 	public GUISkin guiSkin;
 	public Vector2 center = Vector2.zero;
 	public float radius = 50;
