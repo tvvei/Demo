@@ -174,7 +174,12 @@ Prefab:
     - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
         type: 2}
       propertyPath: range.max
-      value: 1.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
+        type: 2}
+      propertyPath: range.min
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -335,7 +340,12 @@ Prefab:
     - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
         type: 2}
       propertyPath: range.max
-      value: 1.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
+        type: 2}
+      propertyPath: range.min
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -836,7 +846,12 @@ Prefab:
     - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
         type: 2}
       propertyPath: range.max
-      value: 1.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
+        type: 2}
+      propertyPath: range.min
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -2008,7 +2023,12 @@ Prefab:
     - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
         type: 2}
       propertyPath: range.max
-      value: 1.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
+        type: 2}
+      propertyPath: range.min
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -4114,7 +4134,12 @@ Prefab:
     - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
         type: 2}
       propertyPath: range.max
-      value: 1.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
+        type: 2}
+      propertyPath: range.min
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -4655,7 +4680,12 @@ Prefab:
     - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
         type: 2}
       propertyPath: range.max
-      value: 1.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246567659248560, guid: 87adb744b80be3144a149a247cb4d6f0,
+        type: 2}
+      propertyPath: range.min
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87adb744b80be3144a149a247cb4d6f0, type: 2}
