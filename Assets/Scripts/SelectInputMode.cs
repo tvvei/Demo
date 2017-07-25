@@ -19,7 +19,7 @@ public class SelectInputMode : MonoBehaviour
 			tempData.text = names [i];
 			dropdown.options.Add (tempData);
 		}
-		dropdown.captionText.text = names [0];
+		dropdown.captionText.text = names [(int)PlayerManager.Instance.inputMode];
 
 		dropdown.onValueChanged.AddListener (OnVauleChanged);
 	}
