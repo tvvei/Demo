@@ -51,8 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ablood.cs" />
-     <Compile Include="Assets\blood.cs" />
      <Compile Include="Assets\Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\CanvasKeyboard.cs" />
      <Compile Include="Assets\Scripts\CanvasRocker.cs" />
@@ -61,6 +59,7 @@
      <Compile Include="Assets\Scripts\Followcamera.cs" />
      <Compile Include="Assets\Scripts\GUIKeyboard.cs" />
      <Compile Include="Assets\Scripts\GUIRocker.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Keyboard.cs" />
      <Compile Include="Assets\Scripts\MinMaxRangeAttribute.cs" />
      <Compile Include="Assets\Scripts\Mouse.cs" />
