@@ -5,13 +5,13 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
 	public GameObject scrollbar;
-	public  float coll = 0;
+	public  float coll;
     private int direction = 1;
     private IEnumerator coroutine;
-
+	public float hp = 2;
 	void Start()
     {       
-		
+		coll = 0;
 //		StartCoroutine(Pop(Time.deltaTime));
 //        StartCoroutine(Bop(Time.deltaTime));  
 	}
@@ -56,10 +56,9 @@ public class PickUp : MonoBehaviour
 	{
 		
 		coll = coll + 1;
-		print (coll);
 
-		if (coll == 3) {
-			Destroy (gameObject, 3);
+		if (coll == hp) {
+			Destroy (gameObject, 1);
 		}
 			
 

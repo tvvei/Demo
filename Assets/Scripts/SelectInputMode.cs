@@ -11,6 +11,7 @@ public class SelectInputMode : MonoBehaviour
 	{
 		dropdown = GetComponent<Dropdown> ();
 		string[] names = Enum.GetNames (typeof(InputMode));
+
 		dropdown.options.Clear ();
 		Dropdown.OptionData tempData;
 		for (int i = 0; i < names.Length; i++) {
@@ -20,8 +21,11 @@ public class SelectInputMode : MonoBehaviour
 		}
 		dropdown.captionText.text = names [0];
 
-		dropdown.onValueChanged.AddListener ((modeIndex) => {
-			PlayerManager.Instance.inputMode = (InputMode)modeIndex;
-		});
+		dropdown.onValueChanged.AddListener (OnVauleChanged);
+	}
+
+	void OnVauleChanged (int modeIndex)
+	{
+		PlayerManager.Instance.inputMode = (InputMode)modeIndex;
 	}
 }
