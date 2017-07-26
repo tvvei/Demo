@@ -6,7 +6,7 @@ public class BloodbarManager : MonoBehaviour
 {
 	public GameObject bloodbarPrefab;
 	public RectTransform canvasRectTransform;
-	private Dictionary<Bloodbar, Scrollbar> bloodbars = new Dictionary<Bloodbar, Scrollbar> ();
+	private Dictionary<Health, Scrollbar> bloodbars = new Dictionary<Health, Scrollbar> ();
 
 	static private BloodbarManager instance;
 
@@ -28,10 +28,9 @@ public class BloodbarManager : MonoBehaviour
 
 	void Update ()
 	{
-		foreach (KeyValuePair<Bloodbar, Scrollbar> bar in bloodbars) {
-			bar.Value.transform.position = bar.Key.transform.position + Vector3.up;
-			bar.Value.transform.LookAt (Camera.main.transform);
-			bar.Value.size = bar.Key.health.hp / bar.Key.health.maxHp;
+		foreach (KeyValuePair<Health, Scrollbar> health in bloodbars) {
+			health.Value.transform.position = health.Key.transform.position + Vector3.up;
+			health.Value.transform.LookAt (Camera.main.transform);
 		}
 	}
 
@@ -40,12 +39,21 @@ public class BloodbarManager : MonoBehaviour
 		if (bloodbarPrefab == null) {
 			return;
 		}
-		if (!bloodbars.ContainsKey (bar)) {
+		Health health = bar.GetComponent<Health> ();
+		health.OnDamageEvent += OnDamage;
+		if (!bloodbars.ContainsKey (health)) {
 			GameObject go = Instantiate<GameObject> (bloodbarPrefab);
 			go.transform.SetParent (canvasRectTransform, false);
 			go.transform.position = bar.transform.position;
 			go.transform.rotation = bar.transform.rotation;
-			bloodbars.Add (bar, go.GetComponent<Scrollbar> ());
+			bloodbars.Add (health, go.GetComponent<Scrollbar> ());
+		}
+	}
+
+	public void OnDamage (Health health)
+	{
+		if (bloodbars.ContainsKey (health)) {
+			bloodbars [health].size = health.hp / health.maxHp; 
 		}
 	}
 }
